@@ -174,9 +174,12 @@ function CameraDisplay() {
 
   return (
     <Box sx={{ px: isMobile ? 4 : 8, py: 4 }}>
-      <Grid container spacing={4}>
+      <Box sx={{
+        display: "flex",
+        justifyContent: "space-evenly"
+      }}>
         {/* Левая часть */}
-        <Grid sx={{ xs: 12, md: 6 }}>
+        <Grid sx={{ xs: 12, md: 6, }}>
           <Box display="flex" flexDirection="column" gap={2}>
             <Box display="flex" alignItems="center" gap={3}>
               <Typography variant="h5" fontSize={48}>
@@ -225,19 +228,19 @@ function CameraDisplay() {
                   widthProp={150}
                   text="image"
                   handleClick={() => setSelectedBgType("IMAGE")}
-                  colorProp="#434343ff"
+                  colorProp="#00BFA5"
                 />
                 <CircledButton
                   widthProp={150}
                   text="GIF/VIDEO"
                   handleClick={() => setSelectedBgType("GIF/VIDEO")}
-                  colorProp="#434343ff"
+                  colorProp="#00BFA5"
                 />
                 <CircledButton
                   widthProp={150}
                   text="AI GENERATE"
                   handleClick={() => setSelectedBgType("AI-GENERATE")}
-                  colorProp="#434343ff"
+                  colorProp="#00BFA5"
                 />
               </Box>
               <Typography variant="body2">
@@ -261,7 +264,7 @@ function CameraDisplay() {
             )}
           </Box>
         </Grid>
-      </Grid>
+      </Box>
 
       {/* Скрытый canvas для отправки кадров */}
       <canvas ref={canvasRef} style={{ display: "none" }} />

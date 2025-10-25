@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, darken } from "@mui/material";
 import React from "react";
 
 interface CircledButtonProps {
@@ -28,7 +28,7 @@ function CircledButton({
         px: 3,
         py: 1.5,
         color: isOutlined ? colorProp : "white",
-        border: `1px solid ${colorProp}`,
+        border: `1px solid ${darken(colorProp!, 0.2)}`,
         bgcolor: isOutlined ? "rgba(0,0,0,0)" : colorProp,
         transition: "all 0.1s ease-out",
         "&:hover": {
