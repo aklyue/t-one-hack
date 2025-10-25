@@ -69,6 +69,7 @@ function BackgroundSelection({
       {selectedBgType === "AI-GENERATE" && (
         <Box>
           <TextareaAutosize
+
             minRows={4}
             placeholder="Text prompt"
             value={prompt}
@@ -81,7 +82,7 @@ function BackgroundSelection({
               border: "1px solid #ccc",
               fontFamily: "inherit",
               fontSize: "1rem",
-              resize: "vertical",
+              resize: "none",
             }}
           />
         </Box>
@@ -96,7 +97,7 @@ function BackgroundSelection({
             heightProp={40}
             text="Upload"
             handleClick={handleFileClick}
-            colorProp="#6E1D26"
+            colorProp="#00BFA5"
           />
           <input
             type="file"
@@ -161,7 +162,7 @@ function BackgroundSelection({
               mask,
             })
           }
-          colorProp="#6E1D26"
+          colorProp="#00BFA5"
         />
       </Box>
     </Box>
